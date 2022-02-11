@@ -7,10 +7,34 @@
 
 import SwiftUI
 
+struct Experiment : Identifiable {
+    var id: Int
+    var name: String
+}
+
 struct ContentView: View {
+    private let experiments: [Experiment] = [
+        Experiment(id:0, name:"Face Mask"),
+        //Experiment(id:1, name:"Face Counter"),
+        Experiment(id:2, name:"Ruler"),
+    ]
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List(experiments) { experiment in
+                let subtitle : Text = Text("\(experiment.name)")
+                
+                switch experiment.id {
+                //case 1:
+                //    NavigationLink(destination: FaceMaskView()) { subtitle }
+                case 2:
+                    NavigationLink(destination: RulerView()) { subtitle }
+                default:
+                    NavigationLink(destination: FaceMaskView()) { subtitle }
+                }
+                
+            }.navigationBarTitle(Text("ARKit Play"))
+        }
     }
 }
 

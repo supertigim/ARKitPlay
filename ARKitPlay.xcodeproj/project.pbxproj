@@ -14,6 +14,13 @@
 		F484CA4527B0B90A00439202 /* ARKitPlayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA4427B0B90A00439202 /* ARKitPlayTests.swift */; };
 		F484CA4F27B0B90A00439202 /* ARKitPlayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA4E27B0B90A00439202 /* ARKitPlayUITests.swift */; };
 		F484CA5127B0B90A00439202 /* ARKitPlayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA5027B0B90A00439202 /* ARKitPlayUITestsLaunchTests.swift */; };
+		F484CA6027B2589200439202 /* FaceMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA5F27B2589200439202 /* FaceMaskView.swift */; };
+		F484CA6227B25BAB00439202 /* FaceMaskRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA6127B25BAB00439202 /* FaceMaskRepresentable.swift */; };
+		F484CA6427B25BCB00439202 /* FaceMaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA6327B25BCB00439202 /* FaceMaskDelegate.swift */; };
+		F484CA6627B25CA700439202 /* GeometryUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA6527B25CA600439202 /* GeometryUtils.swift */; };
+		F484CA6F27B39B9300439202 /* RulerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA6E27B39B9300439202 /* RulerView.swift */; };
+		F484CA7127B39BCD00439202 /* RulerViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA7027B39BCD00439202 /* RulerViewRepresentable.swift */; };
+		F484CA7327B39C1F00439202 /* RulerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA7227B39C1E00439202 /* RulerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,15 @@
 		F484CA4A27B0B90A00439202 /* ARKitPlayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARKitPlayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F484CA4E27B0B90A00439202 /* ARKitPlayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitPlayUITests.swift; sourceTree = "<group>"; };
 		F484CA5027B0B90A00439202 /* ARKitPlayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitPlayUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F484CA5D27B0BABB00439202 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F484CA5F27B2589200439202 /* FaceMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMaskView.swift; sourceTree = "<group>"; };
+		F484CA6127B25BAB00439202 /* FaceMaskRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMaskRepresentable.swift; sourceTree = "<group>"; };
+		F484CA6327B25BCB00439202 /* FaceMaskDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMaskDelegate.swift; sourceTree = "<group>"; };
+		F484CA6527B25CA600439202 /* GeometryUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryUtils.swift; sourceTree = "<group>"; };
+		F484CA6B27B2624000439202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F484CA6E27B39B9300439202 /* RulerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerView.swift; sourceTree = "<group>"; };
+		F484CA7027B39BCD00439202 /* RulerViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerViewRepresentable.swift; sourceTree = "<group>"; };
+		F484CA7227B39C1E00439202 /* RulerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +90,7 @@
 		F484CA2727B0B90700439202 = {
 			isa = PBXGroup;
 			children = (
+				F484CA5D27B0BABB00439202 /* README.md */,
 				F484CA3227B0B90700439202 /* ARKitPlay */,
 				F484CA4327B0B90A00439202 /* ARKitPlayTests */,
 				F484CA4D27B0B90A00439202 /* ARKitPlayUITests */,
@@ -96,8 +113,16 @@
 			children = (
 				F484CA3327B0B90700439202 /* ARKitPlayApp.swift */,
 				F484CA3527B0B90700439202 /* ContentView.swift */,
+				F484CA5F27B2589200439202 /* FaceMaskView.swift */,
+				F484CA6127B25BAB00439202 /* FaceMaskRepresentable.swift */,
+				F484CA6327B25BCB00439202 /* FaceMaskDelegate.swift */,
+				F484CA6E27B39B9300439202 /* RulerView.swift */,
+				F484CA7027B39BCD00439202 /* RulerViewRepresentable.swift */,
+				F484CA7227B39C1E00439202 /* RulerDelegate.swift */,
+				F484CA6527B25CA600439202 /* GeometryUtils.swift */,
 				F484CA3727B0B90900439202 /* Assets.xcassets */,
 				F484CA3927B0B90900439202 /* Preview Content */,
+				F484CA6B27B2624000439202 /* Info.plist */,
 			);
 			path = ARKitPlay;
 			sourceTree = "<group>";
@@ -257,6 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F484CA7127B39BCD00439202 /* RulerViewRepresentable.swift in Sources */,
+				F484CA6027B2589200439202 /* FaceMaskView.swift in Sources */,
+				F484CA7327B39C1F00439202 /* RulerDelegate.swift in Sources */,
+				F484CA6427B25BCB00439202 /* FaceMaskDelegate.swift in Sources */,
+				F484CA6F27B39B9300439202 /* RulerView.swift in Sources */,
+				F484CA6227B25BAB00439202 /* FaceMaskRepresentable.swift in Sources */,
+				F484CA6627B25CA700439202 /* GeometryUtils.swift in Sources */,
 				F484CA3627B0B90700439202 /* ContentView.swift in Sources */,
 				F484CA3427B0B90700439202 /* ARKitPlayApp.swift in Sources */,
 			);
@@ -421,10 +453,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ARKitPlay/Preview Content\"";
 				DEVELOPMENT_TEAM = BG9AFYB5BZ;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ARKitPlay/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -450,10 +484,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ARKitPlay/Preview Content\"";
 				DEVELOPMENT_TEAM = BG9AFYB5BZ;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ARKitPlay/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
