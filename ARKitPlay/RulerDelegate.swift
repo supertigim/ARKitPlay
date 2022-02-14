@@ -17,13 +17,15 @@ class RulerDelegate: NSObject, ARSCNViewDelegate, ObservableObject {
         
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = .horizontal
-        arView.session.run(configuration)
+        
+        arView.session.run(configuration)//, options: [.resetTracking, .removeExistingAnchors])
         
         arView.delegate = self
         arView.scene = SCNScene()
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapOnARView))
         arView.addGestureRecognizer(tapGesture)
-        
+
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panOnARView))
         arView.addGestureRecognizer(panGesture)
     }
@@ -45,7 +47,6 @@ class RulerDelegate: NSObject, ARSCNViewDelegate, ObservableObject {
         default:
             ()
         }
-        
     }
     
     @objc func tapOnARView(sender: UITapGestureRecognizer) {
@@ -60,23 +61,20 @@ class RulerDelegate: NSObject, ARSCNViewDelegate, ObservableObject {
     }
     
     func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
-        print("camera did change \(camera.trackingState)")
+        print("Camera has changed \(camera.trackingState)")
         switch camera.trackingState {
         case .limited(_):
-            message = "tracking limited"
+            message = "Tracking limited"
         case .normal:
-            message =  "tracking ready"
+            message =  "Ready"
         case .notAvailable:
-            message = "cannot track"
+            message = "Not Available"
         }
     }
     
-    // MARK: - Private
-
     private var arView: ARSCNView?
     private var circles:[SCNNode] = []
     private var trackedNode:SCNNode?
-    
     
     private func addCircle(raycastResult: ARRaycastResult) {
         let circleNode = GeometryUtils.createCircle(fromRaycastResult: raycastResult)
@@ -93,8 +91,6 @@ class RulerDelegate: NSObject, ARSCNViewDelegate, ObservableObject {
         nodesUpdated()
     }
     
-    
-    
     private func moveNode(_ node:SCNNode, raycastResult:ARRaycastResult) {
         node.simdWorldTransform = raycastResult.worldTransform
         nodesUpdated()
@@ -109,11 +105,11 @@ class RulerDelegate: NSObject, ARSCNViewDelegate, ObservableObject {
     private func nodesUpdated() {
         if circles.count == 2 {
             let distance = GeometryUtils.calculateDistance(firstNode: circles[0], secondNode: circles[1])
-            print("distance = \(distance)")
-            message = "distance " + String(format: "%.2f cm", distance)
+            print("Distance = \(distance)")
+            message = "Distance " + String(format: "%.2f cm", distance)
         }
         else {
-            message = "add second point"
+            message = "Add second point"
         }
     }
     

@@ -13,6 +13,12 @@ struct FaceMaskView: View {
     var body: some View {
         ZStack {
             FaceMaskViewRepresentable(facemaskDelegate: facemaskDelegate)
+                .onAppear{
+                    facemaskDelegate.configure()
+                }
+                .onDisappear{
+                    facemaskDelegate.disappear()
+                }
         }.edgesIgnoringSafeArea(.all)
     }
 }

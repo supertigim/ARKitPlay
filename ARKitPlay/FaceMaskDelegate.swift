@@ -16,15 +16,24 @@ class FaceMaskDelegate: NSObject, ARSCNViewDelegate, ObservableObject {
     
     func setARView(_ arView: ARSCNView) {
         self.arView = arView
+    }
+    
+    func configure(){
+        guard let arview = self.arView else {return}
         
         // Face Tracking Configuration
         guard ARFaceTrackingConfiguration.isSupported else { return }
         let configuration = ARFaceTrackingConfiguration()
         configuration.isLightEstimationEnabled = true
         
-        arView.session.run(configuration)
-        arView.delegate = self
-        arView.scene = SCNScene()
+        arview.session.run(configuration)
+        arview.delegate = self
+        arview.scene = SCNScene()
+    }
+    
+    func disappear(){
+        guard let arview = self.arView else {return}
+        arview.removeFromSuperview()
     }
  
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F456F58627B68910007173B2 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456F58527B68910007173B2 /* Camera.swift */; };
 		F484CA3427B0B90700439202 /* ARKitPlayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA3327B0B90700439202 /* ARKitPlayApp.swift */; };
 		F484CA3627B0B90700439202 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA3527B0B90700439202 /* ContentView.swift */; };
 		F484CA3827B0B90900439202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F484CA3727B0B90900439202 /* Assets.xcassets */; };
@@ -21,6 +22,9 @@
 		F484CA6F27B39B9300439202 /* RulerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA6E27B39B9300439202 /* RulerView.swift */; };
 		F484CA7127B39BCD00439202 /* RulerViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA7027B39BCD00439202 /* RulerViewRepresentable.swift */; };
 		F484CA7327B39C1F00439202 /* RulerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA7227B39C1E00439202 /* RulerDelegate.swift */; };
+		F484CA7527B62F8600439202 /* FaceDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA7427B62F8600439202 /* FaceDetectionView.swift */; };
+		F484CA7727B62FA400439202 /* FaceDetectionViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA7627B62FA400439202 /* FaceDetectionViewRepresentable.swift */; };
+		F484CA7927B62FC100439202 /* FaceDetectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484CA7827B62FC100439202 /* FaceDetectionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F456F58527B68910007173B2 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		F484CA3027B0B90700439202 /* ARKitPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F484CA3327B0B90700439202 /* ARKitPlayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitPlayApp.swift; sourceTree = "<group>"; };
 		F484CA3527B0B90700439202 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +65,9 @@
 		F484CA6E27B39B9300439202 /* RulerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerView.swift; sourceTree = "<group>"; };
 		F484CA7027B39BCD00439202 /* RulerViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerViewRepresentable.swift; sourceTree = "<group>"; };
 		F484CA7227B39C1E00439202 /* RulerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerDelegate.swift; sourceTree = "<group>"; };
+		F484CA7427B62F8600439202 /* FaceDetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionView.swift; sourceTree = "<group>"; };
+		F484CA7627B62FA400439202 /* FaceDetectionViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionViewRepresentable.swift; sourceTree = "<group>"; };
+		F484CA7827B62FC100439202 /* FaceDetectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,10 +120,14 @@
 			isa = PBXGroup;
 			children = (
 				F484CA3327B0B90700439202 /* ARKitPlayApp.swift */,
+				F456F58527B68910007173B2 /* Camera.swift */,
 				F484CA3527B0B90700439202 /* ContentView.swift */,
 				F484CA5F27B2589200439202 /* FaceMaskView.swift */,
 				F484CA6127B25BAB00439202 /* FaceMaskRepresentable.swift */,
 				F484CA6327B25BCB00439202 /* FaceMaskDelegate.swift */,
+				F484CA7427B62F8600439202 /* FaceDetectionView.swift */,
+				F484CA7627B62FA400439202 /* FaceDetectionViewRepresentable.swift */,
+				F484CA7827B62FC100439202 /* FaceDetectionDelegate.swift */,
 				F484CA6E27B39B9300439202 /* RulerView.swift */,
 				F484CA7027B39BCD00439202 /* RulerViewRepresentable.swift */,
 				F484CA7227B39C1E00439202 /* RulerDelegate.swift */,
@@ -285,10 +297,14 @@
 				F484CA7127B39BCD00439202 /* RulerViewRepresentable.swift in Sources */,
 				F484CA6027B2589200439202 /* FaceMaskView.swift in Sources */,
 				F484CA7327B39C1F00439202 /* RulerDelegate.swift in Sources */,
+				F484CA7927B62FC100439202 /* FaceDetectionDelegate.swift in Sources */,
+				F484CA7527B62F8600439202 /* FaceDetectionView.swift in Sources */,
 				F484CA6427B25BCB00439202 /* FaceMaskDelegate.swift in Sources */,
 				F484CA6F27B39B9300439202 /* RulerView.swift in Sources */,
 				F484CA6227B25BAB00439202 /* FaceMaskRepresentable.swift in Sources */,
+				F484CA7727B62FA400439202 /* FaceDetectionViewRepresentable.swift in Sources */,
 				F484CA6627B25CA700439202 /* GeometryUtils.swift in Sources */,
+				F456F58627B68910007173B2 /* Camera.swift in Sources */,
 				F484CA3627B0B90700439202 /* ContentView.swift in Sources */,
 				F484CA3427B0B90700439202 /* ARKitPlayApp.swift in Sources */,
 			);

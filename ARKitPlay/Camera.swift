@@ -1,0 +1,61 @@
+//
+//  Camera.swift
+//  ARKitPlay
+//
+//  Created by Jong Yoon Kim on 2022/02/11.
+//
+
+import AVFoundation
+
+class Camera {
+    var session = AVCaptureSession()
+    var videoDeviceInput: AVCaptureDeviceInput!
+    
+    // 카메라 셋업 과정을 담당하는 함수, positio
+    func setupCamera() {
+        session.sessionPreset = .high
+        
+        if let device = AVCaptureDevice.default(.builtInWideAngleCamera,
+                                                for: .video, position: .back) {
+            do { // 카메라가 사용 가능하면 세션에 input과 output을 연결
+                videoDeviceInput = try AVCaptureDeviceInput(device: device)
+                if session.canAddInput(videoDeviceInput) {
+                    session.addInput(videoDeviceInput)
+                }
+                
+//                let output = AVCapturePhotoOutput()
+//                if session.canAddOutput(output) {
+//                    session.addOutput(output)
+//                    output.isHighResolutionCaptureEnabled = true
+//                    output.maxPhotoQualityPrioritization = .quality
+//                }
+                session.startRunning() // 세션 시작
+            } catch {
+                print(error) // 에러 프린트
+            }
+        }
+    }
+    
+    func requestAndCheckPermissions() {
+        // 카메라 권한 상태 확인
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .notDetermined:
+            // 권한 요청
+            AVCaptureDevice.requestAccess(for: .video) { [weak self] authStatus in
+                if authStatus {
+                    DispatchQueue.main.async {
+                        self?.setupCamera()
+                    }
+                }
+            }
+        case .restricted:
+            break
+        case .authorized:
+            // 이미 권한 받은 경우 셋업
+            setupCamera()
+        default:
+            // 거절했을 경우
+            print("Permession declined")
+        }
+    }
+}

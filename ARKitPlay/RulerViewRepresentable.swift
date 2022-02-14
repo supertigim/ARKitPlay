@@ -12,7 +12,7 @@ struct RulerViewRepresentable: UIViewRepresentable {
     let rulerDelegate:RulerDelegate
     
     func makeUIView(context: Context) -> some UIView {
-        let rulerView = ARSCNView(frame: .zero)
+        let rulerView = ARSCNView(frame: UIScreen.main.bounds)//frame: .zero)
         rulerDelegate.setARView(rulerView)
         return rulerView
     }

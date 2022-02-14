@@ -15,7 +15,7 @@ struct Experiment : Identifiable {
 struct ContentView: View {
     private let experiments: [Experiment] = [
         Experiment(id:0, name:"Face Mask"),
-        //Experiment(id:1, name:"Face Counter"),
+        Experiment(id:1, name:"Face Counter"),
         Experiment(id:2, name:"Ruler"),
     ]
 
@@ -25,8 +25,8 @@ struct ContentView: View {
                 let subtitle : Text = Text("\(experiment.name)")
                 
                 switch experiment.id {
-                //case 1:
-                //    NavigationLink(destination: FaceMaskView()) { subtitle }
+                case 1:
+                    NavigationLink(destination: FaceDetectionView()) { subtitle }
                 case 2:
                     NavigationLink(destination: RulerView()) { subtitle }
                 default:

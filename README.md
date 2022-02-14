@@ -37,6 +37,8 @@ TBD
 - [Xcode와 깃헙 연동](https://velog.io/@contea95/Swift-Xcode%EC%99%80-Github-%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0). 
 - [info.plist 관련](https://developer.apple.com/forums/thread/129896)
 - [info.plist 한글로 정리](https://blog.naver.com/dnjsjd11/222348112171)
+- [SwiftUI에서 카메라 제어하는 앱 개발 예제](https://enebin.medium.com/swiftui%EB%A7%8C-%EC%8D%A8%EC%84%9C-%ED%98%B8%EB%8B%A4%EB%8B%A5-%EC%B9%B4%EB%A9%94%EB%9D%BC%EC%95%B1-%EB%A7%8C%EB%93%A4%EA%B8%B0-feat-mvvm-1-2782b457f796)
+-[Camera-SwiftUI at Github](https://github.com/rorodriguez116/Camera-SwiftUI)
 
 # License   
 MIT  
